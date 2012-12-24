@@ -9,6 +9,7 @@
 		
 		<!-- Styles -->
 		<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+		<link href="assets/css/prettify.min.css" rel="stylesheet">
 		<link href="assets/css/style.css" rel="stylesheet">
 		
 		<!-- Icons -->
@@ -22,35 +23,40 @@
 	
 	<body>
 		<!-- Header -->
-		<header id="main-header" class="navbar navbar-inverse navbar-fixed-top">
-			<section class="navbar-inner">
-				<section class="container">
-					<a class="brand" href="#">Firework Generator</a>
-				</section>
-			</section>
-		</header>
+		<header id="main-header" class="hero-unit">
+			<a class="brand" href="#">Firework Generator</a>
+		</header>	
 	
-		<!-- Body -->
-		<section class="container">
-			<!-- Main Body -->
-			<section id="body">
-			</section>
-			
-			<!-- Footer -->
-			<footer id="main-footer" class="well well-small init-hidden">
-				<span class="muted">
-					&copy; LimeByte 2012
-					<a id="github-link" class="btn btn-info btn-small pull-right" href="http://github.com/limebyte/FireworkGenerator">
-						<i class="icon-share-alt icon-white"> </i>
-						Github
-					</a>
-				</span>
-			</footer>
+		<!-- Main Body -->
+		<section id="body">
+			<h3>Output</h3>
+			<pre class="generator-output prettyprint linenums pre-scrollable lang-java">
+				// Code appears here
+			</pre>
 		</section>
+		
+		<!-- Footer -->
+		<footer id="main-footer" class="well well-small init-hidden">
+			<span class="muted">
+				&copy; LimeByte 2012
+				<a id="github-link" class="btn btn-info btn-small pull-right" href="http://github.com/limebyte/FireworkGenerator">
+					<i class="icon-share-alt icon-white"> </i>
+					Github
+				</a>
+			</span>
+		</footer>
 		
 		<!-- Javascript -->
 		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/prettify.min.js"></script>
 		<script src="assets/js/bootstrap.min.js"></script>
+		<script src="assets/js/codegenerator.js"></script>
 		<script src="assets/js/util.js"></script>
+		
+		<script>
+		$(document).ready(function() {
+			updateCode();
+		});
+	</script>
 	</body>
 </html>
