@@ -29,32 +29,31 @@
 	
 		<!-- Main Body -->
 		<section id="body">
-			<h3>
+			<h3 id="settings">
 				<i class="icon-wrench"></i>
 				Settings
 				<button class="btn pull-right"><i class="icon-remove"></i></button>
 			</h3>
-			<form>
+			<form id="settings">
 				<fieldset>
-					<label>Display Name</label>
-					<input type="text" placeholder="Firework">
+					<label for="displayname">Display Name</label>
+					<input type="text" name="displayname" id="displayname" placeholder="Firework">
 					
-					<label>Power</label>
-					<input type="number" name="power" min="0" max="127" step="1" value="" placeholder="1">
+					<label for="power">Power</label>
+					<input type="number" name="power" id="power" min="0" max="127" step="1" value="" placeholder="1">
 					
-					<label>Stack Size</label>
-					<input type="number" name="amount" min="1" max="64" step="1" value="1">
-			    </label>
+					<label for="amount">Stack Size</label>
+					<input type="number" name="amount" id="amount" min="1" max="64" step="1" value="1">
 			  </fieldset>
 			</form>
 			
-			<h3>
+			<h3 id="effects">
 				<i class="icon-certificate"></i>
 				Effects
 				<button class="btn pull-right"><i class="icon-plus-sign"></i></button>
 			</h3>
 			
-			<h3>
+			<h3 id="output">
 				<i class="icon-chevron-right"></i>
 				Output
 				<button class="btn pull-right"><i class="icon-refresh"></i></button>
@@ -80,6 +79,7 @@
 		<script src="assets/js/prettify.min.js"></script>
 		<script src="assets/js/bootstrap.min.js"></script>
 		<script src="assets/js/codegenerator.js"></script>
+		<script src="assets/js/eventlistener.js"></script>
 		<script src="assets/js/util.js"></script>
 		
 		<script>

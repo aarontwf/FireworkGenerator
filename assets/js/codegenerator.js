@@ -1,10 +1,9 @@
 var lines = new Array();
-lines[0] = 'public static ItemStack getFirework() {';
-lines[1] = '    ItemStack stack = new ItemStack(Material.FIREWORK, 1);';
 
 var meta = false;
-var displayName;
-var power;
+var displayName = '';
+var power = '';
+var amount = 1;
 
 /* Lines and code updater */
 
@@ -13,19 +12,19 @@ function addLine(line) {
 }
 
 function buildLines() {
-	setDisplayName('Just Testing');
-	setPower(2);
+	addLine('public static ItemStack getFirework() {');
+	addLine('    ItemStack stack = new ItemStack(Material.FIREWORK, ' + amount + ');');
 	
 	if (meta) {
 		addLine('    FireworkMeta meta = (FireworkMeta) stack.getItemMeta();');
 		addLine('');
 	}
 	
-	if (displayName != null) {
+	if (displayName != '') {
 		addLine('    meta.setDisplayName("' + displayName + '");');
 	}
 	
-	if (power != null) {
+	if (power != '') {
 		addLine('    meta.setPower(' + power + ');');
 	}
 	
@@ -41,18 +40,24 @@ function updateCode() {
 		$('pre.generator-output').append(lines[i] + '\n');
 	}
 	
+	lines = [];
 	prettyPrint();
 	logDebug('Code updated.');
 }
 
 /* Firework methods */
 
+function setDisplayName(string) {
+	displayName = string;
+	meta = string != null;
+}
+
 function setPower(int) {
 	power = int;
 	meta = int != null;
 }
 
-function setDisplayName(string) {
-	displayName = string;
-	meta = string != null;
+function setAmount(int) {
+	amount = int;
+	meta = int != null;
 }
