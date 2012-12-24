@@ -23,20 +23,46 @@
 	
 	<body>
 		<!-- Header -->
-		<header id="main-header" class="hero-unit">
+		<header id="main-header" class="">
 			<a class="brand" href="#">Firework Generator</a>
 		</header>	
 	
 		<!-- Main Body -->
 		<section id="body">
-			<h3>Output</h3>
+			<h3>
+				<i class="icon-wrench"></i>
+				Settings
+				<button class="btn pull-right"><i class="icon-remove"></i></button>
+			</h3>
+			<form>
+				<fieldset>
+					<label>Display Name</label>
+					<input type="text" placeholder="Firework">
+					
+					<label>Power</label>
+					<input type="number" name="power" min="0" max="127" step="1" value="" placeholder="1">
+			    </label>
+			  </fieldset>
+			</form>
+			
+			<h3>
+				<i class="icon-certificate"></i>
+				Effects
+				<button class="btn pull-right"><i class="icon-plus-sign"></i></button>
+			</h3>
+			
+			<h3>
+				<i class="icon-chevron-right"></i>
+				Output
+				<button class="btn pull-right"><i class="icon-refresh"></i></button>
+			</h3>
 			<pre class="generator-output prettyprint linenums pre-scrollable lang-java">
 				// Code appears here
 			</pre>
 		</section>
 		
 		<!-- Footer -->
-		<footer id="main-footer" class="well well-small init-hidden">
+		<footer id="main-footer" class="">
 			<span class="muted">
 				&copy; LimeByte 2012
 				<a id="github-link" class="btn btn-info btn-small pull-right" href="http://github.com/limebyte/FireworkGenerator">
