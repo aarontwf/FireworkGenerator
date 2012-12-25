@@ -16,7 +16,20 @@ body {
 	text-decoration: none;
 }
 
-h3 {
+section#effects {
+	margin-left: 30px;
+}
+
+section#effects form#options {
+	margin-top: -11px;;
+	border: 1px solid #555;
+	border-radius: 0 0 4px 4px;
+	padding: 20px;
+	background: #eee;
+	height: 128px;
+}
+
+h3, h4 {
 	margin-top: 20px;
 	padding: 20px;
 	background: #444;
@@ -26,11 +39,33 @@ h3 {
 	border-radius: 4px;
 }
 
-h3 button {
+h4 {
+	font-size: 14px;
+	background: #555;
+	border-radius: 4px 4px 0 0;
+}
+
+h3 button, h4 button {
 	margin-top: -5px;
 }
 
 a#github-link {
 	margin-top: -3px;
 	margin-right: -3px;
+}
+
+section#effects fieldset {
+	display: block;
+	float: left;
+	margin-right: 20px;
+}
+
+label.larger {
+	height: 24px;
+}
+
+label.larger input {
+	margin: 0 2px 0 0;
+	width: 24px;
+	height: 24px;
 }

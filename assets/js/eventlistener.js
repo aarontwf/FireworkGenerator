@@ -27,6 +27,15 @@ $("h3#settings button").click(function() {
 	updateCode();
 });
 
+$('h3#effects button').click(function() {
+	addEffect();
+});
+
+$('section#effects button#remove-effect').live('click', function() {
+	var id = $(this).parent('h4').parent('section').attr("id");
+	removeEffect(id.replace('effect', ''));
+});
+
 $("h3#output button").click(function() {
 	updateCode();
 });
