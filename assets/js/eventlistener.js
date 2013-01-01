@@ -31,17 +31,17 @@ $('h3#effects button').click(function() {
 	addEffect();
 });
 
-$('section#effects button#remove-effect').live('click', function() {
-	var id = $(this).parent('h4').parent('section').attr("id");
-	removeEffect(id.replace('effect', ''));
-});
-
 $("h3#output button").click(function() {
 	updateCode();
 });
 
 /** Effects **/
-$("form#options select#type").change(function() {
+$('section#effects button#remove-effect').live('click', function() {
+	var id = $(this).parent('h4').parent('section').attr("id");
+	removeEffect(id.replace('effect', ''));
+});
+
+$("form#options select#type").live('change', function() {
 	var effect = $(this).parentsUntil('section').attr('id');
 	var value = $(this).val();
 	effects[effect.replace('effect', '')].type = value;
