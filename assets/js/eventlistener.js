@@ -42,7 +42,7 @@ $('section#effects button#remove-effect').live('click', function() {
 });
 
 $("form#options select#type").live('change', function() {
-	var effect = $(this).parentsUntil('section').attr('id');
+	var effect = $(this).closest('section').attr('id');
 	var value = $(this).val();
 	effects[effect.replace('effect', '')].type = value;
 });
