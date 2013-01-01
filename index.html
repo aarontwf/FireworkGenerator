@@ -81,14 +81,17 @@
 		<script src="assets/js/prettify.min.js"></script>
 		<script src="assets/js/bootstrap.min.js"></script>
 		<script src="assets/js/codegenerator.js"></script>
-		<script src="assets/js/eventlistener.js"></script>
 		<script src="assets/js/effects.js"></script>
+		<script src="assets/js/eventlistener.js"></script>
 		<script src="assets/js/util.js"></script>
 		
 		<script>
 		$(document).ready(function() {
+			$.get('assets/html/effect-form.html', function(result) {
+				effectform = result;
+			});
 			updateCode();
 		});
-	</script>
+		</script>
 	</body>
 </html>
