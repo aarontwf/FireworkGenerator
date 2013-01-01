@@ -39,3 +39,10 @@ $('section#effects button#remove-effect').live('click', function() {
 $("h3#output button").click(function() {
 	updateCode();
 });
+
+/** Effects **/
+$("form#options select#type").change(function() {
+	var effect = $(this).parentsUntil('section').attr('id');
+	var value = $(this).val();
+	effects[effect.replace('effect', '')].type = value;
+});
