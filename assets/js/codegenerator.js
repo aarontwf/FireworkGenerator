@@ -24,6 +24,7 @@ function buildLines() {
 		var effectID = index + 1;
 		addLine('    Builder effect' + effectID + ' = FireworkEffect.builder();');
 		addLine('    meta.addEffect(effect' + effectID + '.build());');
+		addLine('');
 	});
 	
 	if (displayName != '') {
@@ -40,6 +41,7 @@ function buildLines() {
 
 function updateCode() {
 	$('pre.generator-output').html('');
+	meta = power != null || displayName != null || effects.length !== 0;
 	buildLines();
 	
 	for (i = 0; i < lines.length; i++) {
@@ -60,10 +62,8 @@ function setDisplayName(string) {
 
 function setPower(int) {
 	power = int;
-	meta = int != null;
 }
 
 function setAmount(int) {
 	amount = int;
-	meta = int != null;
 }
