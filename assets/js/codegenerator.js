@@ -20,6 +20,12 @@ function buildLines() {
 		addLine('');
 	}
 	
+	$.each(effects, function(index, value) { 
+		var effectID = index + 1;
+		addLine('    Builder effect' + effectID + ' = FireworkEffect.builder();');
+		addLine('    meta.addEffect(effect' + effectID + '.build());');
+	});
+	
 	if (displayName != '') {
 		addLine('    meta.setDisplayName("' + displayName + '");');
 	}
