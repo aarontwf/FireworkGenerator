@@ -41,7 +41,7 @@ function buildLines() {
 
 function updateCode() {
 	$('pre.generator-output').html('');
-	meta = power != null || displayName != null || effects.length !== 0;
+	meta = power != '' || displayName != '' || effects.length !== 0;
 	buildLines();
 	
 	for (i = 0; i < lines.length; i++) {
