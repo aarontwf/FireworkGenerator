@@ -18,6 +18,7 @@ function addLine(line) {
 }
 
 function buildLines() {
+	addLine('{% highlight ruby %}');
 	addLine('public static ItemStack getFirework() {');
 	addLine('    ItemStack stack = new ItemStack(Material.FIREWORK, ' + amount + ');');
 	
@@ -48,6 +49,7 @@ function buildLines() {
 	
 	addLine('    return stack;');
 	addLine('}');
+	addLine('{% endhighlight %}');
 }
 
 function updateCode() {
