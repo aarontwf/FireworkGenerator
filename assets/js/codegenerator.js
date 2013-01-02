@@ -5,7 +5,13 @@ var displayName = '';
 var power = '';
 var amount = 1;
 
-/* Lines and code updater */
+/** Effect methods **/
+
+function convertToEnum(string) {
+	return string.toUpperCase().replace(' ', '_');
+}
+
+/** Lines and code updater **/
 
 function addLine(line) {
 	lines[lines.length] = line;
@@ -23,11 +29,11 @@ function buildLines() {
 	$.each(effects, function(index, value) { 
 		var effectID = 'effect' + (index + 1);
 		addLine('    Builder ' + effectID + ' = FireworkEffect.builder();');
-		addLine('    ' + effectID + '.with(Type.' + value.type + ');');
+		addLine('    ' + effectID + '.with(Type.' + convertToEnum(value.type) + ');');
 		if (value.twinkle) addLine('    ' + effectID + '.withFlicker();');
 		if (value.trail)  addLine('    ' + effectID + '.withTrail();');
-		addLine('    ' + effectID + '.withColor(Color.' + value.colour + ');');
-		if (value.fadeColour != 'None') addLine('    ' + effectID + '.withFade(Color.' + value.fadeColour + ');');
+		addLine('    ' + effectID + '.withColor(Color.' + convertToEnum(value.colour) + ');');
+		if (value.fadeColour != 'None') addLine('    ' + effectID + '.withFade(Color.' + convertToEnum(value.fadeColour) + ');');
 		addLine('    meta.addEffect(' + effectID + '.build());');
 		addLine('');
 	});
@@ -58,7 +64,7 @@ function updateCode() {
 	logDebug('Code updated.');
 }
 
-/* Firework methods */
+/** Firework methods **/
 
 function setDisplayName(string) {
 	displayName = string;
