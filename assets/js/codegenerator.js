@@ -27,7 +27,7 @@ function buildLines() {
 		if (value.twinkle) addLine('    ' + effectID + '.withFlicker();');
 		if (value.trail)  addLine('    ' + effectID + '.withTrail();');
 		addLine('    ' + effectID + '.withColor(Color.' + value.colour + ');');
-		if (value.fadeColour != 'None') addLine('    ' + effectID + '.withFade(Color.' + value.fadeColour');');
+		if (value.fadeColour != 'None') addLine('    ' + effectID + '.withFade(Color.' + value.fadeColour + ');');
 		addLine('    meta.addEffect(' + effectID + '.build());');
 		addLine('');
 	});
