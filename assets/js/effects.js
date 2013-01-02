@@ -10,7 +10,7 @@ function Effect(type, twinkle, trail, colour, fadeColour) {
 }
 
 function addEffect() {
-	effects.push(new Effect('Burst', true, true, 'Green', 'Blue'));
+	effects.push(new Effect('Ball', false, false, 'White', 'None'));
 	renderEffects();
 }
 

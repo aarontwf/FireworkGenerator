@@ -46,3 +46,27 @@ $("form#options select#type").live('change', function() {
 	var value = $(this).val();
 	effects[effect.replace('effect', '')].type = value;
 });
+
+$("form#options input#twinkle").live('change', function() {
+	var effect = $(this).closest('section').attr('id');
+	var value = $(this).prop('checked');
+	effects[effect.replace('effect', '')].twinkle = value;
+});
+
+$("form#options input#trail").live('change', function() {
+	var effect = $(this).closest('section').attr('id');
+	var value = $(this).prop('checked');
+	effects[effect.replace('effect', '')].trail = value;
+});
+
+$("form#options select#colour").live('change', function() {
+	var effect = $(this).closest('section').attr('id');
+	var value = $(this).val();
+	effects[effect.replace('effect', '')].colour = value;
+});
+
+$("form#options select#fade-colour").live('change', function() {
+	var effect = $(this).closest('section').attr('id');
+	var value = $(this).val();
+	effects[effect.replace('effect', '')].fadeColour = value;
+});
