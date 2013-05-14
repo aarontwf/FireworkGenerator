@@ -45,7 +45,9 @@ function buildLines() {
 	if (power != '') {
 		addLine('    meta.setPower(' + power + ');');
 	}
-	
+	if(meta) {
+		addLine('    stack.setItemMeta(meta);');
+	}
 	addLine('    return stack;');
 	addLine('}');
 }
